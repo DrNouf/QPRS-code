@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 import random
@@ -18,3 +17,9 @@ def generate_dataset(n_records=300000):
 
     df = pd.DataFrame(data)
     return df
+
+
+if __name__ == "__main__":
+    df = generate_dataset()
+    df.to_csv("synthetic_dataset.csv", index=False)
+    print("Synthetic dataset saved as synthetic_dataset.csv")
